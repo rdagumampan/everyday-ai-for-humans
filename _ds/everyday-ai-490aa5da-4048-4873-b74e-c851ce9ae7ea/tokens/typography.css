@@ -1,0 +1,21 @@
+:root{
+--font-display:"Anthropic Serif Display","Iowan Old Style",Georgia,serif;
+--font-text:"Anthropic Serif Text","Iowan Old Style",Georgia,serif;
+--font-mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+
+--weight-light:300;--weight-regular:400;--weight-medium:500;--weight-semibold:600;--weight-bold:700;
+
+/* display scale — headings, hero, article titles */
+--size-hero:clamp(44px,5.2vw,72px);
+--size-title:clamp(34px,3.4vw,48px);
+--size-h2:30px;--size-h3:23px;--size-h4:19px;
+
+/* text scale — reading + UI */
+--size-lead:21px;--size-body:18px;--size-ui:15px;--size-small:13.5px;--size-micro:11.5px;
+
+--leading-tight:1.08;--leading-snug:1.24;--leading-ui:1.45;--leading-body:1.68;--leading-loose:1.8;
+
+--tracking-tight:-0.02em;--tracking-normal:0;--tracking-wide:0.04em;--tracking-caps:0.13em;
+
+--measure-prose:66ch;--measure-lead:52ch;--measure-narrow:38ch;
+}

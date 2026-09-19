@@ -1,0 +1,9 @@
+:root{
+/* soft, low-contrast, warm-tinted — paper lifting off paper, never a drop shadow */
+--shadow-flat:none;
+--shadow-raised:0 1px 2px rgba(62,71,83,.05),0 2px 8px rgba(62,71,83,.04);
+--shadow-lifted:0 2px 4px rgba(62,71,83,.05),0 10px 28px rgba(62,71,83,.07);
+--shadow-overlay:0 8px 16px rgba(35,40,46,.08),0 28px 64px rgba(35,40,46,.12);
+--shadow-inset-hairline:inset 0 0 0 1px var(--border-hairline);
+--ring-focus:0 0 0 3px rgba(131,145,163,.32);
+}

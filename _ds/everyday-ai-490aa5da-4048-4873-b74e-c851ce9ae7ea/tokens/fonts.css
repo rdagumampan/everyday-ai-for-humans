@@ -1,0 +1,14 @@
+/* Anthropic Serif — Text (body/UI) and Display (headings). Source: everyday-ai/web/Anthropic Serif-fontiko/ */
+@font-face{font-family:"Anthropic Serif Text";src:url("../assets/fonts/AnthropicSerif-Text-Light-Static.otf") format("opentype");font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:"Anthropic Serif Text";src:url("../assets/fonts/AnthropicSerif-Text-Regular-Static.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Anthropic Serif Text";src:url("../assets/fonts/AnthropicSerif-Text-RegularItalic-Static.otf") format("opentype");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"Anthropic Serif Text";src:url("../assets/fonts/AnthropicSerif-Text-Medium-Static.otf") format("opentype");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:"Anthropic Serif Text";src:url("../assets/fonts/AnthropicSerif-Text-Semibold-Static.otf") format("opentype");font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:"Anthropic Serif Text";src:url("../assets/fonts/AnthropicSerif-Text-Bold-Static.otf") format("opentype");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Anthropic Serif Text";src:url("../assets/fonts/AnthropicSerif-Text-BoldItalic-Static.otf") format("opentype");font-weight:700;font-style:italic;font-display:swap}
+@font-face{font-family:"Anthropic Serif Display";src:url("../assets/fonts/AnthropicSerif-Display-Light-Static.otf") format("opentype");font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:"Anthropic Serif Display";src:url("../assets/fonts/AnthropicSerif-Display-Regular-Static.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Anthropic Serif Display";src:url("../assets/fonts/AnthropicSerif-Display-RegularItalic-Static.otf") format("opentype");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"Anthropic Serif Display";src:url("../assets/fonts/AnthropicSerif-Display-Medium-Static.otf") format("opentype");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:"Anthropic Serif Display";src:url("../assets/fonts/AnthropicSerif-Display-Semibold-Static.otf") format("opentype");font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:"Anthropic Serif Display";src:url("../assets/fonts/AnthropicSerif-Display-Bold-Static.otf") format("opentype");font-weight:700;font-style:normal;font-display:swap}

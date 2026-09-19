@@ -1,0 +1,57 @@
+/* Palette: "London sands" (everyday-ai/web/scheme-londo-sands.png) + derived warm paper + ink ramp */
+:root{
+--sand-100:#FAF7F5;--sand-200:#F3EDE9;--sand-300:#EAE2DD;--sand-400:#DCD1C9;
+--blue-100:#EEF2F6;--blue-200:#D0D9E2;--blue-300:#B4C1CF;
+--lilac-200:#C0BFCF;--lilac-300:#A7A6BA;
+--aqua-200:#C9DFE5;--aqua-300:#A9CBD4;
+--slate-400:#8391A3;--slate-500:#6B7A8C;--slate-600:#55616F;--slate-700:#3E4753;
+--ink-900:#23282E;--ink-700:#3E4753;--ink-500:#5E6874;--ink-400:#8391A3;
+--paper:#FFFDFC;
+--sage-400:#7E9A86;--sage-100:#E4EDE7;
+--ochre-400:#B8996B;--ochre-100:#F3EBDD;
+--rust-400:#A9736C;--rust-100:#F2E4E2;
+
+/* semantic — surfaces */
+--surface-page:var(--sand-100);
+--surface-card:var(--paper);
+--surface-sunken:var(--sand-300);
+--surface-subtle:var(--sand-200);
+--surface-cool:var(--blue-100);
+--surface-inverse:var(--ink-900);
+
+/* semantic — text */
+--text-body:var(--ink-700);
+--text-heading:var(--ink-900);
+--text-muted:var(--ink-500);
+--text-faint:var(--ink-400);
+--text-inverse:var(--sand-100);
+--text-link:var(--slate-600);
+--text-link-hover:var(--ink-900);
+
+/* semantic — lines */
+--border-hairline:#E7DFD9;
+--border-default:var(--sand-400);
+--border-strong:var(--blue-300);
+--rule-page:#E7DFD9;
+
+/* semantic — accents */
+--accent:var(--slate-500);
+--accent-hover:var(--slate-600);
+--accent-soft:var(--blue-200);
+--accent-wash:var(--blue-100);
+--focus-ring:var(--slate-400);
+
+/* audience tracks: every concept ships a citizen + a technical read */
+--track-citizen:var(--aqua-200);
+--track-citizen-ink:#3F6570;
+--track-technical:var(--lilac-200);
+--track-technical-ink:#565274;
+
+/* status */
+--status-info:var(--slate-400);--status-info-wash:var(--blue-100);
+--status-good:var(--sage-400);--status-good-wash:var(--sage-100);
+--status-warn:var(--ochre-400);--status-warn-wash:var(--ochre-100);
+--status-alert:var(--rust-400);--status-alert-wash:var(--rust-100);
+
+--selection-bg:var(--aqua-200);
+}

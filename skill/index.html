@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en" class="dc-loading">
+<head>
+<meta charset="utf-8">
+<base href="/">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skill — Everyday AI for Humans</title>
+<meta name="description" content="A reusable playbook that teaches an AI how to do a particular job.">
+<link rel="canonical" href="https://everydayaiforhumans.com/skill/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:site_name" content="Everyday AI for Humans">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Skill — Everyday AI for Humans">
+<meta property="og:description" content="A reusable playbook that teaches an AI how to do a particular job.">
+<meta property="og:url" content="https://everydayaiforhumans.com/skill/">
+<meta property="og:image" content="https://everydayaiforhumans.com/content/skill.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Skill — Everyday AI for Humans">
+<meta name="twitter:description" content="A reusable playbook that teaches an AI how to do a particular job.">
+<meta name="twitter:image" content="https://everydayaiforhumans.com/content/skill.webp">
+<style>html.dc-loading #dc-root{display:none}</style>
+<script src="/support.js"></script>
+<script src="https://dash.tinyanalytics.io/script.js" data-site-id="249" defer></script>
+</head>
+<body>
+<div id="prerendered-content"><h1 style="font-size:2rem;line-height:1.2;">Skill</h1>
+<p style="font-size:1.15rem;line-height:1.6;color:var(--text-muted,#555);max-width:70ch;">What a Skill actually is, how it differs from the AI being &quot;trained,&quot; and why the same request gets handled the same careful way every time you ask.</p>
+<img src="/content/skill.webp" alt="Skill" style="max-width:100%;border-radius:12px;">
+<p style="font-size:17px;line-height:1.6;color:var(--text-body,#2a2a2a);max-width:70ch;">Ask a new hire and a veteran to file an expense report. The veteran knows the company’s way: which form to use, which receipts count, and who must approve it.
+
+A skill gives an AI assistant that same know-how right away.
+
+A skill is a written set of steps for a specific job. It can include rules, examples, formats, and tools to use. When a task matches, the assistant loads the skill and follows it.
+
+This is not new training. The model itself does not change. A person or team simply gives it extra instructions for the job, much like giving a new hire a clear guide before their first shift.
+
+An assistant can have many skills and use the one that best fits the task.</p>
+<h2 style="font-size:1.4rem;margin-top:2em;">Everyday users</h2><p style="font-size:17px;line-height:1.6;color:var(--text-body,#2a2a2a);max-width:70ch;">Say you ask an AI to “summarize this the way I like it.” Without a skill, you may need to repeat your preferences each time.
+
+A skill can save those instructions so the assistant can use them again. You do not have to type the same rules in every chat.
+
+You may never write a skill yourself, but you can still benefit from one. A shopping assistant might always check your size and budget. A travel planner might always choose an aisle seat. A writing tool might always follow your company’s style.
+
+The main benefit is consistency. The same kind of task can be handled the same way each time.</p>
+<h2 style="font-size:1.4rem;margin-top:2em;">Businesses &amp; enterprises</h2><p style="font-size:17px;line-height:1.6;color:var(--text-body,#2a2a2a);max-width:70ch;">Every company has its own rules and ways of working. Skills let a business turn that know-how into steps an AI assistant can follow.
+
+A bank might use a skill that lists the fields needed in a loan summary. An airline might use one that explains which refund rules apply to each fare type.
+
+Skills can improve consistency and make reviews easier. A compliance team can open the skill file and see what the assistant was told to do. When a rule changes, the team can update the skill instead of changing the AI model.
+
+But skills need upkeep. If no one updates them, they can keep giving old guidance.</p>
+<h2 style="font-size:1.4rem;margin-top:2em;">Small talk</h2><p style="font-size:17px;line-height:1.6;color:var(--text-body,#2a2a2a);max-width:70ch;">A skill is a cheat sheet an AI reads before a job, so it follows your steps instead of guessing.</p></div>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="/_ds/everyday-ai-490aa5da-4048-4873-b74e-c851ce9ae7ea/tokens/fonts.css">
+<link rel="stylesheet" href="/_ds/everyday-ai-490aa5da-4048-4873-b74e-c851ce9ae7ea/tokens/colors.css">
+<link rel="stylesheet" href="/_ds/everyday-ai-490aa5da-4048-4873-b74e-c851ce9ae7ea/tokens/typography.css">
+<link rel="stylesheet" href="/_ds/everyday-ai-490aa5da-4048-4873-b74e-c851ce9ae7ea/tokens/spacing.css">
+<link rel="stylesheet" href="/_ds/everyday-ai-490aa5da-4048-4873-b74e-c851ce9ae7ea/tokens/radius.css">
+<link rel="stylesheet" href="/_ds/everyday-ai-490aa5da-4048-4873-b74e-c851ce9ae7ea/tokens/elevation.css">
+<link rel="stylesheet" href="/_ds/everyday-ai-490aa5da-4048-4873-b74e-c851ce9ae7ea/tokens/motion.css">
+<link rel="stylesheet" href="/_ds/everyday-ai-490aa5da-4048-4873-b74e-c851ce9ae7ea/tokens/base.css">
+<link rel="stylesheet" href="/_ds/everyday-ai-490aa5da-4048-4873-b74e-c851ce9ae7ea/styles.css">
+<script src="/_ds/everyday-ai-490aa5da-4048-4873-b74e-c851ce9ae7ea/_ds_bundle.js"></script>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="/fonts/anthropicsans.min.css">
+<style>
+  :root {
+    --font-display: "Anthropic Sans", ui-sans-serif, -apple-system, "Segoe UI", sans-serif;
+    --font-text: var(--font-display);
+    --size-hero: clamp(43px, 5.1vw, 71px);
+    --size-title: clamp(33px, 3.3vw, 47px);
+    --size-h2: 29px; --size-h3: 22px; --size-h4: 18px;
+    --size-lead: 20px; --size-body: 17px; --size-ui: 14px; --size-small: 12.5px; --size-micro: 10.5px;
+  }
+  [data-brand] span, [data-brand] span span { font-style: normal; opacity: 1; font-weight: var(--weight-medium); letter-spacing: var(--tracking-tight); }
+  [data-brand] [data-brand-tail] { font-weight: var(--weight-medium); }
+  html { scroll-behavior: smooth; }
+  body { background: var(--surface-page); }
+  a { color: var(--text-link); }
+  a:hover { color: var(--text-link-hover); }
+  @media (max-width: 1023px) { [data-rail] { display: none !important; } }
+  @media (max-width: 640px) {
+    :root { --size-micro: 11.5px; --size-small: 13px; }
+    [data-legal] a { min-height: 44px; display: inline-flex; align-items: center; padding: 0 2px; }
+    #site-top nav { gap: var(--space-4); }
+    #site-top nav a { font-size: var(--size-small); }
+    #site-top [data-brand] { font-size: 17px; }
+    #site-top [data-brand-tail] { display: none; }
+  }
+  @media (max-width: 860px) { [role="tablist"] button { padding: 10px 18px; } }
+</style>
+</helmet>
+<div style="min-height: 100vh; display: flex; flex-direction: column; background: var(--surface-page);">
+  <header id="site-top" style="position: sticky; top: 0; z-index: 20; background: rgba(250, 247, 245, 0.88); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--rule-page);">
+    <div style="max-width: var(--page-max); margin: 0 auto; padding: var(--space-3) clamp(14px, 4vw, 32px); min-height: 66px; display: flex; align-items: center; flex-wrap: wrap; gap: var(--space-3) var(--space-5);">
+      <a href="/" data-brand style="font-size: 19px; text-decoration: none; display: inline-flex; align-items: baseline; gap: 0.28em; flex: 0 1 auto; min-width: 0;">
+        <x-import component-from-global-scope="EverydayAI_490aa5.Wordmark" size="1em" hint-size="auto,22px"></x-import>
+        <span data-brand-tail style="font-family: var(--font-display); font-size: 1em; line-height: 1.05; letter-spacing: var(--tracking-tight); color: var(--text-muted); font-weight: var(--weight-regular); white-space: nowrap;">for Humans</span>
+        <span title="This site is a work in progress" style="display: inline-flex; align-items: center; font-size: var(--size-micro); letter-spacing: var(--tracking-caps); text-transform: uppercase; color: var(--text-faint); border: 1px solid var(--rule-strong); border-radius: var(--radius-pill); padding: 2px 8px; line-height: 1.4; white-space: nowrap; margin-left: 2px;">Preview</span>
+      </a>
+      <nav style="display: flex; flex-wrap: wrap; gap: var(--space-3) var(--space-5); margin-left: auto; align-items: center;">
+        <a href="/" style="font-size: var(--size-ui); text-decoration: none; color: var(--text-muted);" style-hover="color: var(--text-heading);">Concepts</a>
+        <a href="/evaluation/" style="font-size: var(--size-ui); text-decoration: none; color: var(--text-muted);" style-hover="color: var(--text-heading);">Evaluation</a>
+        <a href="/about/" style="font-size: var(--size-ui); text-decoration: none; color: var(--text-muted);" style-hover="color: var(--text-heading);">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main style="flex: 1; width: 100%; max-width: var(--page-max); margin: 0 auto; padding: clamp(28px, 5vw, 64px) clamp(16px, 4vw, 32px) var(--space-4);">
+
+    <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+      <div style="display: flex; flex-direction: column; gap: var(--space-8);">
+        <section style="display: flex; flex-direction: column; gap: var(--space-5);">
+          <h1 style="font-size: var(--size-hero); line-height: var(--leading-tight); max-width: 20ch;">Every AI concept, told two ways.</h1>
+          <p style="font-size: var(--size-lead); line-height: var(--leading-loose); color: var(--text-muted); max-width: var(--measure-lead); text-wrap: pretty;">Read it in plain language, or with the mechanics intact. Four audiences, one throughline — you choose the depth.</p>
+          <div style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-4); margin-top: var(--space-2);">
+            <x-import component-from-global-scope="EverydayAI_490aa5.AudienceToggle" value="{{ track }}" onChange="{{ onTrack }}" hint-size="auto,44px"></x-import>
+            <x-import component-from-global-scope="EverydayAI_490aa5.Input" iconLeft="search" placeholder="Search concepts" value="{{ query }}" onChange="{{ onQuery }}" hint-size="260px,44px" style="flex: 1 1 220px; max-width: 340px;"></x-import>
+          </div>
+        </section>
+
+        <section style="display: grid; grid-template-columns: repeat(auto-fit, minmax(268px, 1fr)); gap: var(--space-5);">
+          <sc-for list="{{ cards }}" as="c" hint-placeholder-count="3">
+            <x-import component-from-global-scope="EverydayAI_490aa5.ConceptCard" title="{{ c.title }}" blurb="{{ c.blurb }}" topic="{{ c.topic }}" minutes="{{ c.minutes }}" tracks="{{ noTracks }}" href="{{ c.href }}" image="{{ c.image }}" hint-size="100%,240px" style="height: 100%;"></x-import>
+          </sc-for>
+        </section>
+
+        <sc-if value="{{ noResults }}" hint-placeholder-val="{{ false }}">
+          <p style="font-size: var(--size-ui); color: var(--text-faint);">No concepts match that search yet.</p>
+        </sc-if>
+
+        <section style="display: flex; flex-direction: column; gap: var(--space-5); border-top: 1px solid var(--rule-page); padding-top: var(--space-6);">
+          <h2 style="font-size: var(--size-h2);">Every article, four lenses</h2>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-5);">
+            <div style="display: flex; flex-direction: column; gap: var(--space-2);">
+              <span style="font-size: var(--size-micro); letter-spacing: var(--tracking-caps); text-transform: uppercase; color: var(--text-faint);">Lens 01</span>
+              <span style="font-family: var(--font-display); font-size: var(--size-h4); color: var(--text-heading);">Everyday users</span>
+              <p style="font-size: var(--size-ui); color: var(--text-muted); line-height: var(--leading-body);">Where it quietly shows up in the chat window you already use.</p>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: var(--space-2);">
+              <span style="font-size: var(--size-micro); letter-spacing: var(--tracking-caps); text-transform: uppercase; color: var(--text-faint);">Lens 02</span>
+              <span style="font-family: var(--font-display); font-size: var(--size-h4); color: var(--text-heading);">Businesses & enterprises</span>
+              <p style="font-size: var(--size-ui); color: var(--text-muted); line-height: var(--leading-body);">Cost, governance and the questions that come up in vendor rooms.</p>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: var(--space-2);">
+              <span style="font-size: var(--size-micro); letter-spacing: var(--tracking-caps); text-transform: uppercase; color: var(--text-faint);">Lens 03</span>
+              <span style="font-family: var(--font-display); font-size: var(--size-h4); color: var(--text-heading);">AI application builders</span>
+              <p style="font-size: var(--size-ui); color: var(--text-muted); line-height: var(--leading-body);">What the concept costs you once it is wired into your product.</p>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: var(--space-2);">
+              <span style="font-size: var(--size-micro); letter-spacing: var(--tracking-caps); text-transform: uppercase; color: var(--text-faint);">Lens 04</span>
+              <span style="font-family: var(--font-display); font-size: var(--size-h4); color: var(--text-heading);">AI model builders</span>
+              <p style="font-size: var(--size-ui); color: var(--text-muted); line-height: var(--leading-body);">The people who decide how the thing behaves before anyone else touches it.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isAbout }}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; flex-direction: column; gap: var(--space-6); max-width: var(--measure-prose);">
+        <h1 style="font-size: var(--size-title); line-height: var(--leading-tight);">{{ aboutTitle }}</h1>
+        <div style="display: flex; flex-direction: column; gap: var(--space-4);">
+          <sc-for list="{{ aboutIntro }}" as="para" hint-placeholder-count="3">
+            <p style="font-size: var(--size-body); line-height: var(--leading-body); color: var(--text-body);">{{ para.text }}</p>
+          </sc-for>
+        </div>
+        <div style="display: flex; align-items: center; gap: var(--space-3);">
+          <img data-src="{{ aboutAuthorPhoto }}" alt="{{ aboutAuthorName }}" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; flex-shrink: 0;">
+          <div style="display: flex; flex-direction: column;">
+            <span style="font-family: var(--font-display); font-size: var(--size-small); color: var(--text-heading);">{{ aboutAuthorName }}</span>
+            <span style="font-size: var(--size-micro); color: var(--text-faint);">{{ aboutAuthorRole }}</span>
+          </div>
+        </div>
+        <p style="font-size: var(--size-lead); line-height: var(--leading-loose); color: var(--text-muted);">{{ aboutLead }}</p>
+        <sc-for list="{{ aboutBody }}" as="para" hint-placeholder-count="1">
+          <p style="font-size: var(--size-body); line-height: var(--leading-body); color: var(--text-body);">{{ para.text }}</p>
+        </sc-for>
+        <x-import component-from-global-scope="EverydayAI_490aa5.Button" href="{{ aboutCtaHref }}" variant="primary" hint-size="auto,42px" style="align-self: flex-start;">{{ aboutCtaLabel }}</x-import>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isEval }}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; flex-direction: column; gap: var(--space-6);">
+        <header style="display: flex; flex-direction: column; gap: var(--space-4); max-width: var(--measure-prose);">
+          <h1 style="font-size: var(--size-title); line-height: var(--leading-tight);">{{ evalTitle }}</h1>
+          <p style="font-size: var(--size-lead); line-height: var(--leading-loose); color: var(--text-muted); text-wrap: pretty;">{{ evalLead }}</p>
+        </header>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-5);">
+          <sc-for list="{{ evalSteps }}" as="step" hint-placeholder-count="4">
+            <x-import component-from-global-scope="EverydayAI_490aa5.Card" variant="sand" padding="var(--space-5)" hint-size="100%,150px">
+              <div style="font-size: var(--size-micro); letter-spacing: var(--tracking-caps); text-transform: uppercase; color: var(--text-faint); margin-bottom: var(--space-3);">{{ step.eyebrow }}</div>
+              <div style="font-family: var(--font-display); font-size: var(--size-h4); color: var(--text-heading); margin-bottom: var(--space-2);">{{ step.title }}</div>
+              <p style="font-size: var(--size-small); color: var(--text-muted); line-height: var(--leading-body);">{{ step.body }}</p>
+            </x-import>
+          </sc-for>
+        </div>
+
+        <x-import component-from-global-scope="EverydayAI_490aa5.Prose" hint-size="100%,720px">
+          <sc-for list="{{ evalSections }}" as="sec" hint-placeholder-count="5">
+            <section>
+              <sc-if value="{{ sec.first }}" hint-placeholder-val="{{ true }}">
+                <h2 style="font-size: var(--size-h2); border-top: 0; padding-top: 0; margin-top: 0;">{{ sec.title }}</h2>
+              </sc-if>
+              <sc-if value="{{ !sec.first }}" hint-placeholder-val="{{ false }}">
+                <h2 style="font-size: var(--size-h2);">{{ sec.title }}</h2>
+              </sc-if>
+              <p style="font-size: var(--size-body); line-height: var(--leading-body); color: var(--text-body); margin-top: var(--space-4);">{{ sec.body }}</p>
+            </section>
+          </sc-for>
+        </x-import>
+
+        <x-import component-from-global-scope="EverydayAI_490aa5.Callout" kind="{{ evalCalloutKind }}" title="{{ evalCalloutTitle }}" hint-size="100%,140px">{{ evalCalloutBody }}</x-import>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isLegal }}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; flex-direction: column; gap: var(--space-5); max-width: var(--measure-prose);">
+        <x-import component-from-global-scope="EverydayAI_490aa5.Breadcrumb" items="{{ breadcrumb }}" hint-size="100%,20px"></x-import>
+        <h1 style="font-size: var(--size-title); line-height: var(--leading-tight);">{{ legalTitle }}</h1>
+        <p style="font-size: var(--size-lead); line-height: var(--leading-loose); color: var(--text-muted);">{{ legalLead }}</p>
+        <x-import component-from-global-scope="EverydayAI_490aa5.Prose" hint-size="100%,320px">
+          <sc-for list="{{ legalBody }}" as="para" hint-placeholder-count="3">
+            <p style="font-size: var(--size-body); line-height: var(--leading-body); color: var(--text-body);">{{ para.text }}</p>
+          </sc-for>
+        </x-import>
+        <sc-for list="{{ legalTables }}" as="tbl" hint-placeholder-count="2">
+          <div style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; font-size: var(--size-small);">
+              <caption style="text-align: left; font-weight: var(--weight-medium); color: var(--text-heading); margin-bottom: var(--space-3); caption-side: top;">{{ tbl.caption }}</caption>
+              <thead>
+                <tr>
+                  <th style="text-align: left; padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--rule-strong); color: var(--text-muted); white-space: nowrap;">Key</th>
+                  <th style="text-align: left; padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--rule-strong); color: var(--text-muted);">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <sc-for list="{{ tbl.rows }}" as="row" hint-placeholder-count="1">
+                  <tr>
+                    <td style="padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--rule-page); color: var(--text-heading); font-family: var(--font-mono); white-space: nowrap;">{{ row.name }}</td>
+                    <td style="padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--rule-page); color: var(--text-body);">{{ row.description }}</td>
+                  </tr>
+                </sc-for>
+              </tbody>
+            </table>
+          </div>
+        </sc-for>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isArticle }}" hint-placeholder-val="{{ false }}">
+      <article style="display: flex; flex-direction: column; gap: 0;">
+        <header style="display: flex; flex-direction: column; gap: var(--space-4); max-width: var(--measure-prose);">
+          <x-import component-from-global-scope="EverydayAI_490aa5.Breadcrumb" items="{{ breadcrumb }}" hint-size="100%,20px"></x-import>
+          <h1 style="font-size: var(--size-title); font-weight: var(--weight-medium); line-height: var(--leading-tight);">{{ articleTitle }}</h1>
+          <p style="font-size: var(--size-lead); line-height: var(--leading-loose); color: var(--text-muted); max-width: var(--measure-lead); text-wrap: pretty;">{{ articleStandfirst }}</p>
+          <div style="display: flex; align-items: center; gap: var(--space-4); flex-wrap: wrap; margin-top: var(--space-2);">
+            <x-import component-from-global-scope="EverydayAI_490aa5.AudienceToggle" value="{{ track }}" onChange="{{ onTrack }}" hint-size="auto,44px"></x-import>
+            <span style="font-size: var(--size-small); color: var(--text-faint); margin-left: auto; white-space: nowrap;">{{ articleMeta }}</span>
+          </div>
+        </header>
+
+        <div style="display: flex; align-items: flex-start; gap: clamp(24px, 5vw, 64px);">
+          <div style="flex: 1 1 520px; min-width: 0;">
+            <x-import component-from-global-scope="EverydayAI_490aa5.Prose" hint-size="100%,720px">
+              <section id="core" data-section="core">
+                <sc-if value="{{ hasCoreImage }}" hint-placeholder-val="{{ false }}">
+                  <img data-src="{{ coreImage }}" alt="{{ articleTitle }}" style="width: 100%; border-radius: var(--radius-lg); display: block; margin: 0 0 var(--space-4) 0;">
+                </sc-if>
+                <p style="font-size: var(--size-body); line-height: var(--leading-body); color: var(--text-body); margin-top: 0;">{{ coreBody }}</p>
+              </section>
+              <sc-for list="{{ sections }}" as="s" hint-placeholder-count="4">
+                <section id="{{ s.id }}" data-section="{{ s.id }}">
+                  <span style="display: block; font-size: var(--size-micro); letter-spacing: var(--tracking-caps); text-transform: uppercase; color: var(--text-faint); margin-bottom: var(--space-2);">{{ s.eyebrow }}</span>
+                  <h2 style="font-size: var(--size-h2); border-top: 0; padding-top: 0; margin-top: 0;">{{ s.title }}</h2>
+                  <p style="font-size: var(--size-body); line-height: var(--leading-body); color: var(--text-body); margin-top: var(--space-4);">{{ s.body }}</p>
+                </section>
+              </sc-for>
+              <sc-if value="{{ showSmallTalk }}" hint-placeholder-val="{{ true }}">
+                <div id="smalltalk" data-section="smalltalk" style="margin-top: var(--space-8);">
+                  <x-import component-from-global-scope="EverydayAI_490aa5.Callout" kind="smalltalk" hint-size="100%,140px">{{ smallTalk }}</x-import>
+                </div>
+              </sc-if>
+            </x-import>
+
+            <div style="margin-top: var(--space-8);">
+              <x-import component-from-global-scope="EverydayAI_490aa5.ConceptNav" prev="{{ prev }}" next="{{ next }}" hint-size="100%,96px"></x-import>
+            </div>
+          </div>
+
+          <aside data-rail style="flex: 0 0 var(--rail); position: sticky; top: 90px; display: flex; flex-direction: column; gap: var(--space-6);">
+            <x-import component-from-global-scope="EverydayAI_490aa5.TableOfContents" items="{{ toc }}" activeId="{{ activeId }}" onSelect="{{ onToc }}" hint-size="100%,240px"></x-import>
+            <x-import component-from-global-scope="EverydayAI_490aa5.Card" variant="sand" padding="var(--space-5)" hint-size="100%,150px">
+              <div style="font-size: var(--size-micro); letter-spacing: var(--tracking-caps); text-transform: uppercase; color: var(--text-faint); margin-bottom: var(--space-3);">Reading as</div>
+              <div style="font-family: var(--font-display); font-size: var(--size-h4); color: var(--text-heading); margin-bottom: var(--space-3);">{{ trackLabel }}</div>
+              <p style="font-size: var(--size-small); color: var(--text-muted); line-height: var(--leading-body); margin-bottom: var(--space-4);">{{ trackNote }}</p>
+              <x-import component-from-global-scope="EverydayAI_490aa5.Button" variant="secondary" size="sm" onClick="{{ onSwapTrack }}" hint-size="auto,32px">{{ swapLabel }}</x-import>
+            </x-import>
+
+            <div style="display: flex; flex-direction: column; gap: var(--space-3);">
+              <div style="font-size: var(--size-micro); letter-spacing: var(--tracking-caps); text-transform: uppercase; color: var(--text-faint);">Was this helpful?</div>
+              <sc-if value="{{ noVote }}" hint-placeholder-val="{{ true }}">
+                <div style="display: flex; gap: var(--space-2);">
+                  <button type="button" onClick="{{ onVoteUp }}" aria-label="Yes, this was helpful" style="display: inline-flex; align-items: center; gap: var(--space-2); min-height: 34px; padding: 0 var(--space-3); font-family: inherit; font-size: var(--size-small); color: var(--text-body); background: var(--surface-card); border: 1px solid var(--rule-strong); border-radius: var(--radius-pill); cursor: pointer;" style-hover="background: var(--surface-subtle); color: var(--text-heading);">
+                    <x-import component-from-global-scope="EverydayAI_490aa5.Icon" name="thumbs-up" size="14" hint-size="14px,14px"></x-import>
+                    Yes
+                  </button>
+                  <button type="button" onClick="{{ onVoteDown }}" aria-label="No, this was not helpful" style="display: inline-flex; align-items: center; gap: var(--space-2); min-height: 34px; padding: 0 var(--space-3); font-family: inherit; font-size: var(--size-small); color: var(--text-body); background: var(--surface-card); border: 1px solid var(--rule-strong); border-radius: var(--radius-pill); cursor: pointer;" style-hover="background: var(--surface-subtle); color: var(--text-heading);">
+                    <x-import component-from-global-scope="EverydayAI_490aa5.Icon" name="thumbs-down" size="14" hint-size="14px,14px"></x-import>
+                    No
+                  </button>
+                </div>
+              </sc-if>
+              <sc-if value="{{ hasVote }}" hint-placeholder-val="{{ false }}">
+                <span style="font-size: var(--size-ui); color: var(--text-muted); line-height: var(--leading-body);">{{ voteThanks }}</span>
+              </sc-if>
+            </div>
+          </aside>
+        </div>
+      </article>
+    </sc-if>
+  </main>
+
+  <footer style="border-top: 1px solid var(--rule-page); background: var(--surface-subtle);">
+    <div style="max-width: var(--page-max); margin: 0 auto; padding: var(--space-7) clamp(16px, 4vw, 32px); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: var(--space-5) var(--space-7); font-size: var(--size-small);">
+      <div style="display: flex; flex-direction: column; gap: var(--space-2); max-width: 34ch;">
+        <x-import component-from-global-scope="EverydayAI_490aa5.Wordmark" size="18px" hint-size="auto,20px"></x-import>
+        <p style="font-size: var(--size-small); color: var(--text-faint); line-height: var(--leading-body);">Plain-language and technical reads of the AI ideas that keep coming up.</p>
+      </div>
+      <div data-legal style="display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: var(--space-3) var(--space-5); font-size: var(--size-small);">
+      <a href="/privacy-choices/" style="color: var(--text-muted); text-decoration: none;" style-hover="color: var(--text-heading);">Privacy choices</a>
+      <a href="/privacy/" style="color: var(--text-muted); text-decoration: none;" style-hover="color: var(--text-heading);">Privacy policy</a>
+      <a href="/terms/" style="color: var(--text-muted); text-decoration: none;" style-hover="color: var(--text-heading);">Terms of use</a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;defaultTrack&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;citizen&quot;,&quot;technical&quot;],&quot;default&quot;:&quot;citizen&quot;,&quot;tsType&quot;:&quot;\&quot;citizen\&quot; | \&quot;technical\&quot;&quot;,&quot;section&quot;:&quot;Reading&quot;},&quot;showSmallTalk&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Reading&quot;}}">
+// Page content (CITIZEN_LENSES, TECHNICAL_LENSES, CONCEPTS, TRACK_NOTE,
+// LEGAL, ABOUT, EVAL) lives in dedicated JSON files under content/ — one
+// file per page — and is loaded in Component#loadContent below. Citizen
+// and technical use different section sets (technical has no
+// "everyday"-audience equivalent), so each track gets its own lens list
+// rather than one shared list — see site.json.
+
+class Component extends DCLogic {
+  state = { path: "/", track: "citizen", query: "", activeId: "core", vote: null, dataReady: false };
+  CITIZEN_LENSES = [];
+  TECHNICAL_LENSES = [];
+  CONCEPTS = [];
+  TRACK_NOTE = {};
+  LEGAL = {};
+  ABOUT = {};
+  EVAL = {};
+
+  componentDidMount() {
+    let track = this.props.defaultTrack || "citizen";
+    try {
+      const saved = localStorage.getItem("everydayaiforhumans-reader-track");
+      if (saved === "citizen" || saved === "technical") track = saved;
+    } catch (e) {}
+    this.setState({ path: location.pathname || "/", track });
+    this.onPop = () => {
+      this.setState({ path: location.pathname || "/", activeId: "core", vote: null });
+      window.scrollTo({ top: 0 });
+    };
+    this.onScroll = () => {
+      const nodes = Array.from(document.querySelectorAll("[data-section]"));
+      if (!nodes.length) return;
+      let id = nodes[0].id;
+      for (const n of nodes) if (n.getBoundingClientRect().top <= 160) id = n.id;
+      if (id !== this.state.activeId) this.setState({ activeId: id });
+    };
+    this.onClick = (e) => {
+      if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      const a = e.target.closest("a");
+      if (!a || a.target === "_blank" || a.hasAttribute("download")) return;
+      const href = a.getAttribute("href");
+      if (!href || !href.startsWith("/") || href.startsWith("//")) return;
+      e.preventDefault();
+      this.go(href);
+    };
+    window.addEventListener("popstate", this.onPop);
+    window.addEventListener("scroll", this.onScroll, { passive: true });
+    document.addEventListener("click", this.onClick);
+    this.loadContent();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("popstate", this.onPop);
+    window.removeEventListener("scroll", this.onScroll);
+    document.removeEventListener("click", this.onClick);
+  }
+
+  // Images bound to template data use data-src, not src: the raw template
+  // markup sits in the DOM before hydration, and a literal src="{{ expr }}"
+  // gets eagerly fetched by the browser's HTML parser as a 404 before the
+  // real value is known. data-src is inert to that parser, so this copies
+  // the resolved URL into the real src once it's known, after every render.
+  componentDidUpdate() {
+    document.querySelectorAll("img[data-src]").forEach((img) => {
+      if (img.dataset.src && img.getAttribute("src") !== img.dataset.src) img.src = img.dataset.src;
+    });
+  }
+
+  // Content lives one JSON file per page under content/ — fetched once on
+  // mount, then read off `this` in renderVals(). The list of concepts is
+  // not hardcoded here: it comes from content/toc.json, so publishing a
+  // new concept never requires touching this file.
+  loadContent = () => {
+    const legalPages = ["privacy-choices", "privacy", "terms"];
+    const singlePages = ["about", "evaluation"];
+    fetch("/content/toc.json").then((r) => r.json())
+      .then((toc) => {
+        const conceptSlugs = toc.concepts;
+        const names = ["site", ...conceptSlugs, ...legalPages, ...singlePages];
+        return Promise.all(names.map((name) => fetch("/content/" + name + ".json").then((r) => r.json())))
+          .then((results) => {
+            const site = results[0];
+            const concepts = results.slice(1, 1 + conceptSlugs.length);
+            const [privacyChoices, privacy, terms, about, evaluation] = results.slice(1 + conceptSlugs.length);
+            this.CITIZEN_LENSES = site.citizenLenses;
+            this.TECHNICAL_LENSES = site.technicalLenses;
+            this.TRACK_NOTE = site.trackNote;
+            this.CONCEPTS = concepts;
+            this.LEGAL = { "privacy-choices": privacyChoices, privacy, terms };
+            this.ABOUT = about;
+            this.EVAL = evaluation;
+            this.setState({ dataReady: true });
+            document.documentElement.classList.remove("dc-loading");
+            const pre = document.getElementById("prerendered-content");
+            if (pre) pre.remove();
+          });
+      })
+      .catch((e) => console.error("[everyday-ai] content load failed:", e));
+  };
+
+  setTrack = (t) => {
+    this.setState({ track: t });
+    try { localStorage.setItem("everydayaiforhumans-reader-track", t); } catch (e) {}
+  };
+
+  go = (path) => {
+    if (location.pathname === path) { window.scrollTo({ top: 0 }); return; }
+    history.pushState(null, "", path);
+    this.setState({ path, activeId: "core", vote: null });
+    window.scrollTo({ top: 0 });
+  };
+
+  renderVals() {
+    const CONCEPTS = this.CONCEPTS;
+    const TRACK_NOTE = this.TRACK_NOTE;
+    const LEGAL = this.LEGAL;
+    const ABOUT = this.ABOUT || {};
+    const EVAL = this.EVAL || {};
+    const track = this.state.track;
+    const LENSES = track === "citizen" ? this.CITIZEN_LENSES : this.TECHNICAL_LENSES;
+    const other = track === "citizen" ? "technical" : "citizen";
+    const routePath = this.state.path || "/";
+    const slug = routePath.replace(/^\/+/, "").replace(/\/+$/, "").split("?")[0];
+    const concept = CONCEPTS.find((c) => c.slug === slug);
+    const isAbout = slug === "about";
+    const isEval = slug === "evaluation";
+    const legal = LEGAL[slug];
+    const isLegal = Boolean(legal);
+    const isArticle = Boolean(concept);
+    const isHome = !isArticle && !isAbout && !isLegal && !isEval;
+    const q = this.state.query.trim().toLowerCase();
+
+    const cards = CONCEPTS.filter((c) => !q || (c.title + " " + c.topic + " " + c[track].blurb).toLowerCase().includes(q))
+      .map((c) => ({
+        title: c.title, topic: c.topic, blurb: c[track].blurb, minutes: c.minutes[track],
+        tracks: ["citizen", "technical"], href: "/" + c.slug + "/", image: c.citizen.image || null,
+      }));
+
+    const vals = {
+      isHome, isAbout, isArticle, isLegal, isEval,
+      track,
+      trackLabel: track === "citizen" ? "Everyday read" : "Technical read",
+      trackNote: TRACK_NOTE[track],
+      swapLabel: other === "citizen" ? "Switch to Everyday" : "Switch to Technical",
+      onSwapTrack: () => this.setTrack(other),
+      onTrack: this.setTrack,
+      query: this.state.query,
+      onQuery: (e) => this.setState({ query: e.target.value }),
+      cards,
+      allConcepts: CONCEPTS.map((c) => ({ title: c.title, href: "/" + c.slug + "/" })),
+      noTracks: [],
+      noResults: isHome && cards.length === 0,
+      activeNav: isAbout ? "about" : "concepts",
+      headerLinks: [{ id: "concepts", label: "Concepts", href: "/" }, { id: "about", label: "About", href: "/about/" }],
+      onNavigate: (id) => this.go(id === "about" ? "/about/" : "/"),
+      onSearch: () => {
+        this.go("/");
+        setTimeout(() => { const i = document.querySelector('input[placeholder="Search concepts"]'); if (i) i.focus(); }, 60);
+      },
+      footerColumns: [
+        { title: "Concepts", items: CONCEPTS.map((c) => c.title) },
+        { title: "Tracks", items: ["Everyday read", "Technical read"] },
+      ],
+      showSmallTalk: this.props.showSmallTalk !== false,
+      activeId: this.state.activeId,
+      onToc: (id) => {
+        const el = document.getElementById(id);
+        if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 96, behavior: "smooth" });
+        this.setState({ activeId: id });
+      },
+    };
+
+    if (isLegal) {
+      const legalTables = legal.tables || [];
+      Object.assign(vals, {
+        legalTitle: legal.title,
+        legalLead: legal.lead,
+        legalBody: legal.body.map((text, i) => ({ text, key: i })),
+        breadcrumb: [{ label: "Concepts", href: "/" }, { label: legal.title }],
+        legalTables: legalTables.map((t, i) => ({
+          key: i,
+          caption: t.caption,
+          rows: (t.rows || []).map((row, j) => ({ key: j, name: row[0], description: row[1] })),
+        })),
+      });
+    }
+
+    if (isAbout) {
+      Object.assign(vals, {
+        aboutIntro: (ABOUT.intro || []).map((text, i) => ({ text, key: i })),
+        aboutTitle: ABOUT.title,
+        aboutAuthorPhoto: ABOUT.author && ABOUT.author.photo,
+        aboutAuthorName: ABOUT.author && ABOUT.author.name,
+        aboutAuthorRole: ABOUT.author && ABOUT.author.role,
+        aboutLead: ABOUT.lead,
+        aboutBody: (ABOUT.body || []).map((text, i) => ({ text, key: i })),
+        aboutCtaLabel: ABOUT.cta && ABOUT.cta.label,
+        aboutCtaHref: ABOUT.cta && ABOUT.cta.href,
+      });
+    }
+
+    if (isEval) {
+      Object.assign(vals, {
+        evalTitle: EVAL.title,
+        evalLead: EVAL.lead,
+        evalSteps: (EVAL.steps || []).map((s, i) => ({ ...s, key: i })),
+        evalSections: (EVAL.sections || []).map((s, i) => ({ ...s, key: i, first: i === 0 })),
+        evalCalloutKind: EVAL.callout && EVAL.callout.kind,
+        evalCalloutTitle: EVAL.callout && EVAL.callout.title,
+        evalCalloutBody: EVAL.callout && EVAL.callout.body,
+      });
+    }
+
+    if (isArticle) {
+      const body = concept[track];
+      const i = CONCEPTS.indexOf(concept);
+      const prevC = CONCEPTS[i - 1], nextC = CONCEPTS[i + 1];
+      Object.assign(vals, {
+        articleTitle: concept.title,
+        articleStandfirst: body.standfirst,
+        articleMeta: concept.minutes[track] + " min read · Updated " + concept.updated,
+        breadcrumb: [{ label: "Concepts", href: "/" }, { label: concept.topic, href: "/" }, { label: concept.title }],
+        coreBody: body.core,
+        coreImage: body.image,
+        hasCoreImage: Boolean(body.image),
+        sections: LENSES.map((l) => ({
+          id: l.id, title: l.title, eyebrow: l.eyebrow, body: body[l.id],
+        })),
+        smallTalk: body.smalltalk,
+        toc: [{ id: "core", label: "The core idea" }]
+          .concat(LENSES.map((l) => ({ id: l.id, label: l.title })))
+          .concat(this.props.showSmallTalk === false ? [] : [{ id: "smalltalk", label: "Small-talk version" }]),
+        noVote: !this.state.vote,
+        hasVote: Boolean(this.state.vote),
+        voteThanks: this.state.vote === "down" ? "Noted — thanks, we will take another pass at this one." : "Thanks — glad it landed.",
+        onVoteUp: () => {
+          if (window.tinyanalytics) window.tinyanalytics.event("feedback_vote", { answer: "yes", slug: concept.slug, track });
+          this.setState({ vote: "up" });
+        },
+        onVoteDown: () => {
+          if (window.tinyanalytics) window.tinyanalytics.event("feedback_vote", { answer: "no", slug: concept.slug, track });
+          this.setState({ vote: "down" });
+        },
+        prev: prevC ? { title: prevC.title, href: "/" + prevC.slug + "/" } : null,
+        next: nextC ? { title: nextC.title, href: "/" + nextC.slug + "/" } : null,
+      });
+    }
+    return vals;
+  }
+}
+
+</script>
+</body>
+</html>
