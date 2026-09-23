@@ -72,6 +72,17 @@
     #site-top [data-brand-tail] { display: none; }
   }
   @media (max-width: 860px) { [role="tablist"] button { padding: 10px 18px; } }
+  @media (max-width: 480px) {
+    /* Header nav never fits beside the brand on a phone-width viewport (needs
+       ~470px+); give it its own full-width row on purpose instead of letting
+       it wrap raggedly wherever the words happen to break. */
+    #site-top nav { width: 100%; margin-left: 0; justify-content: flex-start; }
+    /* The search box doesn't fit next to the toggle at this width, and text
+       search isn't essential for browsing a dozen concept cards on a phone
+       — hide it instead of stacking it. Concepts are still reachable by
+       scrolling; search comes back at wider (tablet/desktop) widths. */
+    [data-hero-controls] label { display: none !important; }
+  }
 </style>
 </helmet>
 <div style="min-height: 100vh; display: flex; flex-direction: column; background: var(--surface-page);">
@@ -96,8 +107,8 @@
       <div style="display: flex; flex-direction: column; gap: var(--space-8);">
         <section style="display: flex; flex-direction: column; gap: var(--space-5);">
           <h1 style="font-size: var(--size-hero); line-height: var(--leading-tight); max-width: 20ch;">Every AI concept, told two ways.</h1>
-          <p style="font-size: var(--size-lead); line-height: var(--leading-loose); color: var(--text-muted); max-width: var(--measure-lead); text-wrap: pretty;">Read it in plain language, or with the mechanics intact. Four audiences, one throughline — you choose the depth.</p>
-          <div style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-4); margin-top: var(--space-2);">
+          <p style="font-size: var(--size-lead); line-height: var(--leading-loose); color: var(--text-muted); max-width: var(--measure-lead); text-wrap: pretty;">Read it in the plain-language, or go deeper into how it works. Four audiences, one concept, two levels of detail.</p>
+          <div data-hero-controls style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-4); margin-top: var(--space-2);">
             <x-import component-from-global-scope="EverydayAI_490aa5.AudienceToggle" value="{{ track }}" onChange="{{ onTrack }}" hint-size="auto,44px"></x-import>
             <x-import component-from-global-scope="EverydayAI_490aa5.Input" iconLeft="search" placeholder="Search concepts" value="{{ query }}" onChange="{{ onQuery }}" hint-size="260px,44px" style="flex: 1 1 220px; max-width: 340px;"></x-import>
           </div>
@@ -119,22 +130,22 @@
             <div style="display: flex; flex-direction: column; gap: var(--space-2);">
               <span style="font-size: var(--size-micro); letter-spacing: var(--tracking-caps); text-transform: uppercase; color: var(--text-faint);">Lens 01</span>
               <span style="font-family: var(--font-display); font-size: var(--size-h4); color: var(--text-heading);">Everyday users</span>
-              <p style="font-size: var(--size-ui); color: var(--text-muted); line-height: var(--leading-body);">Where it quietly shows up in the chat window you already use.</p>
+              <p style="font-size: var(--size-ui); color: var(--text-muted); line-height: var(--leading-body);">How it changes your daily experiences with AI.</p>
             </div>
             <div style="display: flex; flex-direction: column; gap: var(--space-2);">
               <span style="font-size: var(--size-micro); letter-spacing: var(--tracking-caps); text-transform: uppercase; color: var(--text-faint);">Lens 02</span>
               <span style="font-family: var(--font-display); font-size: var(--size-h4); color: var(--text-heading);">Businesses & enterprises</span>
-              <p style="font-size: var(--size-ui); color: var(--text-muted); line-height: var(--leading-body);">Cost, governance and the questions that come up in vendor rooms.</p>
+              <p style="font-size: var(--size-ui); color: var(--text-muted); line-height: var(--leading-body);">What it means for cost, risk, governance, and buying decisions.</p>
             </div>
             <div style="display: flex; flex-direction: column; gap: var(--space-2);">
               <span style="font-size: var(--size-micro); letter-spacing: var(--tracking-caps); text-transform: uppercase; color: var(--text-faint);">Lens 03</span>
               <span style="font-family: var(--font-display); font-size: var(--size-h4); color: var(--text-heading);">AI application builders</span>
-              <p style="font-size: var(--size-ui); color: var(--text-muted); line-height: var(--leading-body);">What the concept costs you once it is wired into your product.</p>
+              <p style="font-size: var(--size-ui); color: var(--text-muted); line-height: var(--leading-body);">What happens when you wire the idea into your product.</p>
             </div>
             <div style="display: flex; flex-direction: column; gap: var(--space-2);">
               <span style="font-size: var(--size-micro); letter-spacing: var(--tracking-caps); text-transform: uppercase; color: var(--text-faint);">Lens 04</span>
               <span style="font-family: var(--font-display); font-size: var(--size-h4); color: var(--text-heading);">AI model builders</span>
-              <p style="font-size: var(--size-ui); color: var(--text-muted); line-height: var(--leading-body);">The people who decide how the thing behaves before anyone else touches it.</p>
+              <p style="font-size: var(--size-ui); color: var(--text-muted); line-height: var(--leading-body);">The choices that shape how the model learns and behaves.</p>
             </div>
           </div>
         </section>
