@@ -77,16 +77,21 @@
        panel (rendered only while open, see menuOpen) handle the links. */
     [data-nav-desktop] { display: none !important; }
     [data-menu-toggle] { display: inline-flex !important; }
-    /* The search box doesn't fit next to the toggle at this width, and text
-       search isn't essential for browsing a dozen concept cards on a phone
-       — hide it instead of stacking it. Concepts are still reachable by
-       scrolling; search comes back at wider (tablet/desktop) widths. */
-    [data-hero-controls] label { display: none !important; }
-    /* The front-page track toggle is hidden on phones too — cards fall
-       back to the Everyday/citizen read (see isMobile in renderVals).
-       Article pages keep their own toggle regardless of device; this
-       selector is scoped to the homepage hero only. */
-    [data-hero-controls] [role="tablist"] { display: none !important; }
+    /* Search doesn't fit next to the toggle at this width and isn't
+       essential for browsing a dozen concept cards on a phone; the track
+       toggle is hidden too — cards fall back to the Everyday/citizen read
+       (see isMobile in renderVals). Article pages keep their own toggle
+       regardless of device. Hide the whole wrapper, not just its two
+       children: an empty-but-present flex container still contributes its
+       own gap/margin-top to the layout, which left a large dead gap above
+       the first card — collapsing the wrapper removes that gap too. */
+    [data-hero-controls] { display: none !important; }
+    /* space-8 (64px) between sections is sized for the desktop rhythm,
+       which includes the now-hidden toggle/search row. Without it, that
+       much bare vertical gap between the intro paragraph and the first
+       card reads as a layout gap rather than normal spacing — match it to
+       the same space-5 gap used between the cards themselves. */
+    [data-home-sections] { gap: var(--space-5); }
   }
   @media (min-width: 481px) {
     /* Safety net: if the menu was left open on a phone and the viewport
@@ -125,7 +130,7 @@
   <main style="flex: 1; width: 100%; max-width: var(--page-max); margin: 0 auto; padding: clamp(28px, 5vw, 64px) clamp(16px, 4vw, 32px) var(--space-4);">
 
     <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
-      <div style="display: flex; flex-direction: column; gap: var(--space-8);">
+      <div data-home-sections style="display: flex; flex-direction: column; gap: var(--space-8);">
         <section style="display: flex; flex-direction: column; gap: var(--space-5);">
           <h1 style="font-size: var(--size-hero); line-height: var(--leading-tight); max-width: 20ch;">Every AI concept, told two ways.</h1>
           <p style="font-size: var(--size-lead); line-height: var(--leading-loose); color: var(--text-muted); max-width: var(--measure-lead); text-wrap: pretty;">Read it in the plain-language, or go deeper into how it works. Four audiences, one concept, two levels of detail.</p>
