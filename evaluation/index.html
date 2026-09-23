@@ -73,15 +73,29 @@
   }
   @media (max-width: 860px) { [role="tablist"] button { padding: 10px 18px; } }
   @media (max-width: 480px) {
-    /* Header nav never fits beside the brand on a phone-width viewport (needs
-       ~470px+); give it its own full-width row on purpose instead of letting
-       it wrap raggedly wherever the words happen to break. */
-    #site-top nav { width: 100%; margin-left: 0; justify-content: flex-start; }
+    /* Header links never fit beside the brand on a phone-width viewport
+       (needs ~470px+) and wrapping them onto their own row still ate
+       header height on every page. Swap to a hamburger instead: hide the
+       inline link row, show the toggle button, and let the dropdown
+       panel (rendered only while open, see menuOpen) handle the links. */
+    [data-nav-desktop] { display: none !important; }
+    [data-menu-toggle] { display: inline-flex !important; }
     /* The search box doesn't fit next to the toggle at this width, and text
        search isn't essential for browsing a dozen concept cards on a phone
        — hide it instead of stacking it. Concepts are still reachable by
        scrolling; search comes back at wider (tablet/desktop) widths. */
     [data-hero-controls] label { display: none !important; }
+    /* The front-page track toggle is hidden on phones too — cards fall
+       back to the Everyday/citizen read (see isMobile in renderVals).
+       Article pages keep their own toggle regardless of device; this
+       selector is scoped to the homepage hero only. */
+    [data-hero-controls] [role="tablist"] { display: none !important; }
+  }
+  @media (min-width: 481px) {
+    /* Safety net: if the menu was left open on a phone and the viewport
+       then grows past the breakpoint (e.g. a mid-session resize), don't
+       leave the dropdown panel floating over the desktop header. */
+    [data-nav-mobile] { display: none !important; }
   }
 </style>
 </helmet>
@@ -93,12 +107,22 @@
         <span data-brand-tail style="font-family: var(--font-display); font-size: 1em; line-height: 1.05; letter-spacing: var(--tracking-tight); color: var(--text-muted); font-weight: var(--weight-regular); white-space: nowrap;">for Humans</span>
         <span title="This site is a work in progress" style="display: inline-flex; align-items: center; font-size: var(--size-micro); letter-spacing: var(--tracking-caps); text-transform: uppercase; color: var(--text-faint); border: 1px solid var(--rule-strong); border-radius: var(--radius-pill); padding: 2px 8px; line-height: 1.4; white-space: nowrap; margin-left: 2px;">Preview</span>
       </a>
-      <nav style="display: flex; flex-wrap: wrap; gap: var(--space-3) var(--space-5); margin-left: auto; align-items: center;">
+      <nav data-nav-desktop style="display: flex; flex-wrap: wrap; gap: var(--space-3) var(--space-5); margin-left: auto; align-items: center;">
         <a href="/" style="font-size: var(--size-ui); text-decoration: none; color: var(--text-muted);" style-hover="color: var(--text-heading);">Concepts</a>
         <a href="/evaluation/" style="font-size: var(--size-ui); text-decoration: none; color: var(--text-muted);" style-hover="color: var(--text-heading);">Evaluation</a>
         <a href="/about/" style="font-size: var(--size-ui); text-decoration: none; color: var(--text-muted);" style-hover="color: var(--text-heading);">About</a>
       </nav>
+      <button type="button" data-menu-toggle aria-label="Toggle menu" aria-expanded="{{ menuOpen }}" onClick="{{ onToggleMenu }}" style="display: none; margin-left: auto; align-items: center; justify-content: center; width: 40px; height: 40px; padding: 0; background: transparent; border: 1px solid var(--rule-strong); border-radius: var(--radius-pill); color: var(--text-heading); cursor: pointer;">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2 4.5H16M2 9H16M2 13.5H16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
     </div>
+    <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+      <nav data-nav-mobile style="position: absolute; top: 100%; left: 0; right: 0; display: flex; flex-direction: column; padding: var(--space-2) clamp(14px, 4vw, 32px) var(--space-4); background: var(--surface-page); border-bottom: 1px solid var(--rule-page); box-shadow: var(--shadow-raised);">
+        <a href="/" style="min-height: 44px; display: flex; align-items: center; font-size: var(--size-ui); text-decoration: none; color: var(--text-muted);" style-hover="color: var(--text-heading);">Concepts</a>
+        <a href="/evaluation/" style="min-height: 44px; display: flex; align-items: center; font-size: var(--size-ui); text-decoration: none; color: var(--text-muted);" style-hover="color: var(--text-heading);">Evaluation</a>
+        <a href="/about/" style="min-height: 44px; display: flex; align-items: center; font-size: var(--size-ui); text-decoration: none; color: var(--text-muted);" style-hover="color: var(--text-heading);">About</a>
+      </nav>
+    </sc-if>
   </header>
 
   <main style="flex: 1; width: 100%; max-width: var(--page-max); margin: 0 auto; padding: clamp(28px, 5vw, 64px) clamp(16px, 4vw, 32px) var(--space-4);">
@@ -342,7 +366,7 @@
 // rather than one shared list — see site.json.
 
 class Component extends DCLogic {
-  state = { path: "/", track: "citizen", query: "", activeId: "core", vote: null, dataReady: false };
+  state = { path: "/", track: "citizen", query: "", activeId: "core", vote: null, dataReady: false, menuOpen: false, isMobile: false };
   CITIZEN_LENSES = [];
   TECHNICAL_LENSES = [];
   CONCEPTS = [];
@@ -357,9 +381,12 @@ class Component extends DCLogic {
       const saved = localStorage.getItem("everydayaiforhumans-reader-track");
       if (saved === "citizen" || saved === "technical") track = saved;
     } catch (e) {}
-    this.setState({ path: location.pathname || "/", track });
+    this.mql = window.matchMedia("(max-width: 480px)");
+    this.onMqlChange = (e) => this.setState({ isMobile: e.matches });
+    this.mql.addEventListener("change", this.onMqlChange);
+    this.setState({ path: location.pathname || "/", track, isMobile: this.mql.matches });
     this.onPop = () => {
-      this.setState({ path: location.pathname || "/", activeId: "core", vote: null });
+      this.setState({ path: location.pathname || "/", activeId: "core", vote: null, menuOpen: false });
       window.scrollTo({ top: 0 });
     };
     this.onScroll = () => {
@@ -370,6 +397,9 @@ class Component extends DCLogic {
       if (id !== this.state.activeId) this.setState({ activeId: id });
     };
     this.onClick = (e) => {
+      if (this.state.menuOpen && !e.target.closest("[data-nav-mobile], [data-menu-toggle]")) {
+        this.setState({ menuOpen: false });
+      }
       if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
       const a = e.target.closest("a");
       if (!a || a.target === "_blank" || a.hasAttribute("download")) return;
@@ -385,6 +415,7 @@ class Component extends DCLogic {
   }
 
   componentWillUnmount() {
+    this.mql.removeEventListener("change", this.onMqlChange);
     window.removeEventListener("popstate", this.onPop);
     window.removeEventListener("scroll", this.onScroll);
     document.removeEventListener("click", this.onClick);
@@ -441,7 +472,7 @@ class Component extends DCLogic {
   go = (path) => {
     if (location.pathname === path) { window.scrollTo({ top: 0 }); return; }
     history.pushState(null, "", path);
-    this.setState({ path, activeId: "core", vote: null });
+    this.setState({ path, activeId: "core", vote: null, menuOpen: false });
     window.scrollTo({ top: 0 });
   };
 
@@ -465,9 +496,14 @@ class Component extends DCLogic {
     const isHome = !isArticle && !isAbout && !isLegal && !isEval;
     const q = this.state.query.trim().toLowerCase();
 
-    const cards = CONCEPTS.filter((c) => !q || (c.title + " " + c.topic + " " + c[track].blurb).toLowerCase().includes(q))
+    // On a phone the front-page toggle is hidden (see the max-width:480px
+    // rule on [data-hero-controls] [role="tablist"]), so cards always fall
+    // back to the Everyday/citizen read there regardless of whatever track
+    // is selected — e.g. from an earlier visit to an article page.
+    const cardTrack = this.state.isMobile ? "citizen" : track;
+    const cards = CONCEPTS.filter((c) => !q || (c.title + " " + c.topic + " " + c[cardTrack].blurb).toLowerCase().includes(q))
       .map((c) => ({
-        title: c.title, topic: c.topic, blurb: c[track].blurb, minutes: c.minutes[track],
+        title: c.title, topic: c.topic, blurb: c[cardTrack].blurb, minutes: c.minutes[cardTrack],
         tracks: ["citizen", "technical"], href: "/" + c.slug + "/", image: c.citizen.image || null,
       }));
 
@@ -479,6 +515,8 @@ class Component extends DCLogic {
       swapLabel: other === "citizen" ? "Switch to Everyday" : "Switch to Technical",
       onSwapTrack: () => this.setTrack(other),
       onTrack: this.setTrack,
+      menuOpen: this.state.menuOpen,
+      onToggleMenu: () => this.setState({ menuOpen: !this.state.menuOpen }),
       query: this.state.query,
       onQuery: (e) => this.setState({ query: e.target.value }),
       cards,
